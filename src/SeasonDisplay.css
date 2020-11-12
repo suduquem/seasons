@@ -1,0 +1,36 @@
+.icon-left {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.icon-right {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+}
+
+.season-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.season-display.winter i {
+  /* El padre tiene className="season-display winter" y contiene un hijo <i> */
+  color: blue;
+}
+
+.season-display.summer i {
+  /* El padre tiene className="season-display summer" y contiene un hijo <i> */
+  color: orangered;
+}
+
+.winter {
+  background-color: aliceblue;
+}
+
+.summer {
+  background-color: orange;
+}
