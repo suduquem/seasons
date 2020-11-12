@@ -8,4 +8,8 @@ const Spinner = (props) => {
   );
 };
 
+Spinner.defaultProps = {
+  message: 'Loaging...',
+};
+
 export default Spinner;
