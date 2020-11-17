@@ -53,10 +53,9 @@ class App extends React.Component {
     console.log('My component was just updated - it rerendered');
   }
 
-  // React says we have to define render!!!
-  render() {
-    // El método render se llama muchas veces, cada que se va a renderizar un componente
-    // Por eso no es un buen lugar para hacer un llamado a una API
+  renderContent() {
+    // Helper method puede tener cualquier nombre
+    // La idea de este método es evitar condicionales en el método render()
 
     // Si se tiene un mensaje de error y no se tiene latitud
     if (this.state.errorMessage && !this.state.lat) {
@@ -71,6 +70,13 @@ class App extends React.Component {
 
     // Si no se cumplen los anteriores if
     return <Spinner message='Please accept location request' />;
+  }
+
+  // React says we have to define render!!!
+  render() {
+    // El método render se llama muchas veces, cada que se va a renderizar un componente
+    // Por eso no es un buen lugar para hacer un llamado a una API
+    return <div className='border red'>{this.renderContent()}</div>;
   }
 }
 
